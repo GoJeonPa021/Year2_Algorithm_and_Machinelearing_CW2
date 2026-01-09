@@ -1,38 +1,78 @@
 # Year2_Algorithm_and_Machinelearing_CW2
-# Algorithms and Machine Learning (MATH20017) Coursework
+# Algorithms and Machine Learning – Coursework 1 (MATH20017)
 
-[cite_start]This repository contains the implementation and analysis for **Assessed Coursework 1 (Part 1)** of the MATH20017 module at the University of Bristol (Autumn 2024). [cite_start]The coursework focuses on core algorithmic concepts, including divide-and-conquer proofs, Monte Carlo simulations, and selection algorithms.
+This repository contains my solutions for **Assessed Coursework 1** of the unit  
+**Algorithms and Machine Learning (MATH20017)**, Autumn 2024.
 
-## Coursework Overview
-The project is divided into three major theoretical and practical questions:
+The coursework covers fundamental algorithmic techniques including
+divide-and-conquer analysis, randomized algorithms, sorting, inversion counting,
+and deterministic selection.
 
-### 1. Divide-and-Conquer Analysis
-- [cite_start]**Master Method Proofs**: Detailed proofs demonstrating that the key lemma for the Master Method implies the Master Method Bound theorem.
-- [cite_start]**Lemma Derivation**: Step-by-step derivation of the key lemma following the lecture strategy to provide a clear explanation of recurrence relation bounds.
+---
 
-### 2. Monte Carlo Method
-- [cite_start]Analysis and implementation of probabilistic simulations using the Monte Carlo approach to estimate values or solve computational problems[cite: 3].
+## 📁 Contents
 
-### 3. Selection Algorithms
-- [cite_start]**Deterministic Selection**: Implementation of the `deterministic_select` algorithm.
-- [cite_start]**Median of Medians**: Uses a "median of medians" strategy to find a "good" pivot, ensuring a worst-case time complexity of $\Theta(n)$.
-- [cite_start]**Testing**: Includes a robust test suite (`selection_function_test`) to verify the function against Python’s native sorting sub-routines over multiple random trials.
+- `Coursework1.ipynb`  
+  Jupyter notebook containing **all implementations, proofs, and tests**.
 
+- `Coursework1.pdf`  
+  Exported PDF version of the notebook, submitted for assessment.
 
+---
 
-## Implementation Details
-- **Language**: Python 3.x
-- [cite_start]**Environment**: Jupyter Notebook / Google Colab [cite: 5]
-- **Key Libraries**:
-    - [cite_start]`NumPy`: Used for array manipulation and random number generation[cite: 3, 4].
-    - `Matplotlib`: (If applicable) used for visualizing algorithm performance or simulation results.
+## 🧠 Coursework Overview
 
-## Requirements for Submission
-[cite_start]According to the module requirements, the final submission must include:
-1. A **PDF file** with all mathematical proofs and code outputs clearly visible.
-2. The original **Jupyter Notebook** (`.ipynb`) or RMarkdown file.
-3. Any supplementary files (e.g., images of handwritten proofs).
+### Question 1: Divide-and-Conquer Algorithms
+- Proof that the **key lemma for the Master Method** implies the Master Method bound.
+- Proof of the **key lemma** itself.
+- All arguments are written clearly and follow the lecture proof strategy.
 
-## Contact Information
-For clarifications regarding the coursework questions:
-[cite_start]**Henry Reeve** - henry.reeve@bristol.ac.uk
+---
+
+### Question 2: Monte Carlo Method
+- Implementation of a **Monte Carlo estimator for π**.
+- Uses i.i.d. uniform random variables and geometric probability.
+- Achieves accuracy to **2 decimal places**, verified against `numpy.pi`.
+
+---
+
+### Question 3: Quick Sort Algorithm
+- Implementation of **randomised Quick Sort** in Python.
+- Correctness tested against Python’s built-in `sorted` function.
+- Formal proof that the **expected runtime is O(n log n)**.
+
+---
+
+### Question 4: Counting Array Inversions
+- Efficient **divide-and-conquer algorithm** for counting inversions.
+- Runs in **O(n log n)** time.
+- Includes:
+  - `count_inv_and_sort`
+  - `count_split_inv_and_merge`
+- Verified against a naive Θ(n²) inversion counter.
+
+---
+
+### Question 5: Selection Problem
+- Deterministic linear-time selection algorithm (**Median of Medians**).
+- Python implementation of `deterministic_select`.
+- Correctness verified using extensive randomized testing.
+
+---
+
+## 🧪 Testing and Validation
+
+All algorithmic implementations are tested using:
+- Randomised input arrays
+- Comparison against known-correct baseline methods
+- Fixed random seeds for reproducibility
+
+All tests pass successfully.
+
+---
+
+## ▶️ How to Run
+
+1. Open the notebook:
+   ```bash
+   jupyter notebook Coursework1.ipynb
