@@ -1,78 +1,66 @@
 # Year2_Algorithm_and_Machinelearing_CW2
-# Algorithms and Machine Learning – Coursework 1 (MATH20017)
+# Algorithms and Machine Learning – Coursework 2 (MATH20017)
 
-This repository contains my solutions for **Assessed Coursework 1** of the unit  
+This repository contains my solutions for **Assessed Coursework 2** of the unit  
 **Algorithms and Machine Learning (MATH20017)**, Autumn 2024.
 
-The coursework covers fundamental algorithmic techniques including
-divide-and-conquer analysis, randomized algorithms, sorting, inversion counting,
-and deterministic selection.
+The coursework focuses on **graph traversal algorithms, depth-first and breadth-first search,
+topological sorting, greedy algorithms, and optimisation problems**.
 
 ---
 
-## 📁 Contents
+## Files Included
 
-- `Coursework1.ipynb`  
-  Jupyter notebook containing **all implementations, proofs, and tests**.
+- `CW2.ipynb`  
+  Jupyter notebook containing all implementations, explanations, and test outputs.
 
-- `Coursework1.pdf`  
-  Exported PDF version of the notebook, submitted for assessment.
+- `CW2.pdf`  
+  PDF export of the notebook with all answers visible.
 
----
-
-## 🧠 Coursework Overview
-
-### Question 1: Divide-and-Conquer Algorithms
-- Proof that the **key lemma for the Master Method** implies the Master Method bound.
-- Proof of the **key lemma** itself.
-- All arguments are written clearly and follow the lecture proof strategy.
+- `CW2_24_MATH20017.pdf`  
+  Coursework specification provided by the module.
 
 ---
 
-### Question 2: Monte Carlo Method
-- Implementation of a **Monte Carlo estimator for π**.
-- Uses i.i.d. uniform random variables and geometric probability.
-- Achieves accuracy to **2 decimal places**, verified against `numpy.pi`.
+## Coursework Content
+
+### Question 1: Breadth-First Search (BFS)
+- Implementation of `bfs_reachable_nodes`
+- Returns all nodes reachable from a given start node
+- Example application: shortest paths in unweighted graphs
 
 ---
 
-### Question 3: Quick Sort Algorithm
-- Implementation of **randomised Quick Sort** in Python.
-- Correctness tested against Python’s built-in `sorted` function.
-- Formal proof that the **expected runtime is O(n log n)**.
+### Question 2: Depth-First Search and Topological Sorting
+- Implementation of `dfs_reachable_nodes`
+- DFS-based topological sort for directed acyclic graphs
+- Cycle detection using `topological_sort_DAG_check`
 
 ---
 
-### Question 4: Counting Array Inversions
-- Efficient **divide-and-conquer algorithm** for counting inversions.
-- Runs in **O(n log n)** time.
-- Includes:
-  - `count_inv_and_sort`
-  - `count_split_inv_and_merge`
-- Verified against a naive Θ(n²) inversion counter.
+### Question 3: Largest Island Problem
+- DFS-based solution for computing the maximum island area in a grid
+- Uses 4-directional connectivity
+- Tested using randomly generated grid maps
 
 ---
 
-### Question 5: Selection Problem
-- Deterministic linear-time selection algorithm (**Median of Medians**).
-- Python implementation of `deterministic_select`.
-- Correctness verified using extensive randomized testing.
+### Question 4: Greedy Algorithms
+- Examples of greedy algorithms (Activity Selection, Huffman Coding)
+- Modified Dijkstra’s algorithm for minimum Euclidean norm paths
+- Correctness justified using greedy-choice arguments
 
 ---
 
-## 🧪 Testing and Validation
-
-All algorithmic implementations are tested using:
-- Randomised input arrays
-- Comparison against known-correct baseline methods
-- Fixed random seeds for reproducibility
-
-All tests pass successfully.
+### Question 5: Minimum Graph Cost
+- Implementation of `min_graph_cost` using Prim’s algorithm
+- Computes the minimum cost of a connected undirected graph
+- Worst-case time complexity: **O(n² log n)**
 
 ---
 
-## ▶️ How to Run
+## Running the Code
 
 1. Open the notebook:
    ```bash
-   jupyter notebook Coursework1.ipynb
+   jupyter notebook CW2.ipynb
